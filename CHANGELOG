@@ -1,6 +1,10 @@
 CHANGELOG keyboard_shortcuts
 ============================
 
+RELEASE 3.0
+
+- compatibility with Roundcube 1.6
+
 RELEASE 2.4.1
 
 - fix composer.json

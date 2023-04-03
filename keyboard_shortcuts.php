@@ -76,7 +76,7 @@ class keyboard_shortcuts extends rcube_plugin
         $keyboard_shortcuts = $rcmail->config->get('keyboard_shortcuts_extras', array());
 
         $c = "";
-        $c .= '<span id="keyboard_shortcuts_title">' . $this->gettext("title") . ":&nbsp;</span><a id='keyboard_shortcuts_link' href='#' class='button' title='".$this->gettext("keyboard_shortcuts")." ".$this->gettext("show")."' onclick='return keyboard_shortcuts_show_help()'><img align='top' src='plugins/keyboard_shortcuts/skins/".$skin."/images/keyboard.png' alt='".$this->gettext("keyboard_shortcuts")." ".$this->gettext("show")."' /></a>\n";
+        $c .= "<a class='keyboard_shortcuts' href='#' title='".$this->gettext("keyboard_shortcuts")." ".$this->gettext("show")."' onclick='return keyboard_shortcuts_show_help()'><span class='inner'>" . $this->gettext("title") . "</span></a>\n";
         $c .= "<div id='keyboard_shortcuts_help'>";
         $c .= "<div><h4>".$this->gettext("mailboxview")."</h4>";
         $c .= "<div class='shortcut_key'>?</div> ".$this->gettext('help')."<br class='clear' />";
@@ -96,12 +96,12 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div class='shortcut_key'> </div> <br class='clear' />";
         $c .= "</div>";
 
-        if(!is_object($rcmail->imap)){
-          $rcmail->imap_connect();
+        if(!is_object($rcmail->get_storage())){
+          $rcmail->storage_connect();
         }
-        $threading_supported = $rcmail->imap->get_capability('thread=references')
-          || $rcmail->imap->get_capability('thread=orderedsubject')
-          || $rcmail->imap->get_capability('thread=refs');
+        $threading_supported = $rcmail->get_storage()->get_capability('thread=references')
+          || $rcmail->get_storage()->get_capability('thread=orderedsubject')
+          || $rcmail->get_storage()->get_capability('thread=refs');
 
         if ($threading_supported) {
           $c .= "<div><h4>".$this->gettext("threads")."</h4>";

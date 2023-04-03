@@ -14,10 +14,9 @@
 	text-align: center;
 }
 
-#keyboard_shortcuts_title {
-  margin-left: 12px;
+.menu a.keyboard_shortcuts::before {
+	content: "";
+	background: url(skins/elastic/images/keyboard.png) no-repeat;
+	background-position: center;
 }
 
-#keyboard_shortcuts_link {
-  width: 31px !important;
-}
