@@ -1,6 +1,14 @@
 CHANGELOG keyboard_shortcuts
 ============================
 
+RELEASE 3.1
+
+- added: Bulgarian translation
+- added: "/" key for search (common search shortcut)
+- bugfix: "s" key not working in elastic due to incorrect HTML ID of search box set in javascript code
+- changed: new keyboard icon with a proper fa-keyboard-o symbol for elastic theme
+
+
 RELEASE 3.0
 
 - compatibility with Roundcube 1.6
