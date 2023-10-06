@@ -27,6 +27,7 @@
  * r:	Reply to message
  * R:	Reply to all of message
  * s:	Jump to quicksearch
+ * /:	Jump to quicksearch
  * u:	Check for new mail (update)
  *
  * Shortcuts, threads view:
@@ -66,11 +67,6 @@ class keyboard_shortcuts extends rcube_plugin
     function html_output($p) {
       if ($p['name'] == "listcontrols") {
         $rcmail = rcmail::get_instance();
-        $skin  = $rcmail->config->get('skin');
-
-        if(!file_exists('plugins/keyboard_shortcuts/skins/' . $skin . '/images/keyboard.png')){
-          $skin = "default";
-        }
 
         $this->load_config();
         $keyboard_shortcuts = $rcmail->config->get('keyboard_shortcuts_extras', array());
@@ -92,6 +88,7 @@ class keyboard_shortcuts extends rcube_plugin
         $c .= "<div class='shortcut_key'>r</div> ".$this->gettext('replytomessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>R</div> ".$this->gettext('replytoallmessage')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>s</div> ".$this->gettext('quicksearch')."<br class='clear' />";
+        $c .= "<div class='shortcut_key'>/</div> ".$this->gettext('quicksearch')."<br class='clear' />";
         $c .= "<div class='shortcut_key'>u</div> ".$this->gettext('checkmail')."<br class='clear' />";
         $c .= "<div class='shortcut_key'> </div> <br class='clear' />";
         $c .= "</div>";
