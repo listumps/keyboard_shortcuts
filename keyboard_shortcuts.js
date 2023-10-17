@@ -38,13 +38,21 @@ $(function() {
         this[rcmail.env.ks_functions[e.which]]();
         return false;
       }
-
+      
+      var ks_searchbox = '#quicksearchbox';
+      if ($('#mailsearchform').length) {    // correct HTML ID for elastic theme
+        ks_searchbox = '#mailsearchform';
+      }
+      
       switch (e.which) {
-          case 63:		// ? = help
+        case 47:		// / = search
+          $(ks_searchbox).focus();
+          $(ks_searchbox).select();
+          return false;
+        case 63:		// ? = help
           //keyboard_shortcuts_show_help();
           var ks_function = rcmail.env.ks_functions[e.which];
           this[ks_function]();
-
           return false;
         case 65:		// A = mark all as read
           rcmail.command('select-all', 'page');
@@ -104,8 +112,8 @@ $(function() {
           rcmail.command('reply');
           return false;
         case 115:		// s = search
-          $('#quicksearchbox').focus();
-          $('#quicksearchbox').select();
+          $(ks_searchbox).focus();
+          $(ks_searchbox).select();
           return false;
         case 117:		// u = update (check for mail)
           rcmail.command('checkmail');

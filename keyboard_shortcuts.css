@@ -15,8 +15,8 @@
 }
 
 .menu a.keyboard_shortcuts::before {
-	content: "";
-	background: url(skins/elastic/images/keyboard.png) no-repeat;
 	background-position: center;
+	content: "\f11c"
 }
+
 

@@ -4,6 +4,7 @@
   "license":"GPL-2.0",
   "homepage":"https://github.com/corbosman/keyboard_shortcuts",
   "type": "roundcube-plugin",
+  "version": "3.1",
   "authors": [
           {
               "name": "Cor Bosman",
