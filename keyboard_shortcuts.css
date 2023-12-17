@@ -12,6 +12,11 @@
 	float: left;
 	font-weight: bold;
 	text-align: center;
+	color: #00acff;
+}
+
+.ui-dialog:has(#keyboard_shortcuts_help) {
+	opacity: 0.9;
 }
 
 .menu a.keyboard_shortcuts::before {
