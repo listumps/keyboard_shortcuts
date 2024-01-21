@@ -1,10 +1,10 @@
 {
-  "name":"dapphp/keyboard_shortcuts",
+  "name":"listumps/keyboard_shortcuts",
   "description":"allows some functionality to be handled with the keyboard",
   "license":"GPL-2.0",
-  "homepage":"https://github.com/corbosman/keyboard_shortcuts",
+  "homepage":"https://github.com/listumps/keyboard_shortcuts",
   "type": "roundcube-plugin",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "authors": [
           {
               "name": "Cor Bosman",
@@ -14,8 +14,7 @@
           }
       ],
   "support": {
-          "email": "cor@roundcu.be",
-          "issues": "https://github.com/corbosman/keyboard_shortcuts/issues"
+          "issues": "https://github.com/listumps/keyboard_shortcuts"
       },
     "require": {
         "roundcube/plugin-installer": ">=0.1.7"
