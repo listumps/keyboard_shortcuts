@@ -12,7 +12,6 @@ CONTACT
 -------
 Author:   Cor Bosman (cor@roundcu.be)
 
-Bug reports through github (https://github.com/corbosman/keyboard_shortcuts/issues)
 
 LICENSE
 -------
